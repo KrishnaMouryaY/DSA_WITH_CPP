@@ -62,4 +62,54 @@ int maxSumRectangle(vector<vector<int>>& arr, int n, int m)
     }
     return res;
 }
+// Efficient Approach
+int kadanesSubSum (int* arr, int n) {
+    int res = arr[0];
+    int subSum = arr[0];
+    for (int i = 1; i < n; i++) {
+        subSum = max(subSum + arr[i], arr[i]);
+        res = max(subSum, res);
+    }
+    return res;
+}
+int maxSumRectangle(vector<vector<int>>& arr, int n, int m)
+{
+	// write your code here
+    int res = arr[0][0];
+    
+    for (int startj = 0; startj < m; startj++) {
+        int subMatrix[n] = {0};
+        for (int j = startj; j < m; j++) {
+            for (int i = 0; i < n; i++)
+                subMatrix[i] += arr[i][j];
+            res = max(res, kadanesSubSum(subMatrix, n));
+        }
+    }
+    return res;
+}
 
+
+// Efficient approach 2
+int kadanesSubSum (int* arr, int n) {
+        int res = arr[0];
+        int subSum = arr[0];
+        for (int i = 1; i < n; i++) {
+            subSum = max(subSum + arr[i], arr[i]);
+            res = max(subSum, res);
+        }
+        return res;
+}
+int maximumSumRectangle(int n, int m, vector<vector<int>> arr) {
+// code here
+	int res = arr[0][0];
+
+	for (int starti = 0; starti < n; starti++) {
+	    int subMatrix[m] = {0};
+	    for (int i = starti; i < n; i++) {
+		for (int j = 0; j < m; j++)
+		    subMatrix[j] += arr[i][j];
+		res = max(res, kadanesSubSum(subMatrix, m));
+	    }
+	}
+	return res;
+}
