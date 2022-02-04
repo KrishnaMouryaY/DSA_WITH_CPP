@@ -20,37 +20,28 @@
 // Expected Auxiliary Space: O(V)
 
 // Approach 1 Recursion 1;
-int minCoins(int coins[], int M, int V) 
-	{ 
-	    Your code goes here
-	    if (V == 0)
-	        return 0;
-	    if (M == 0)
-	        return -1;
-	    int exclude = minCoins(coins, M - 1, V);
-	    int include = -1;
-	    if (V - coins[M - 1] >= 0) {
-	        include = minCoins(coins, M, V - coins[M - 1]);
-	        if (include != -1)
-	            include = include + 1;
-	    }
-	    if (include == -1 && exclude == -1)
-	        return -1;
-	    else {
-	        if (include != -1 && exclude != -1) 
-	            return min(include, exclude);
-	        else {
-	            if (include != -1)
-	                return include;
-	            else
-	                return exclude;
-	        }
-	    }
+int mC2(vector<int> &coins, int sum, int n) {
+    if (sum == 0)   
+	return 0;   
+    if (n == 0)   
+	return -1;
+    int n1 = -1;
+    int n2 = -1;
+    n1 = mC2(coins, sum, n - 1);
+    if (coins[n - 1] <= sum)   
+	n2 = mC2(coins, sum - coins[n - 1], n);
+    if (n2 != -1)   n2 += 1;
+    if (n1 == -1 && n2 == -1)   
+	return -1;
+    if (n1 == -1 || n2 == -1)   
+	return n1 + n2 + 1;
+    return min(n1, n2);
 }
 
 // Recursion 2
 int mC(vector<int> &coins, int sum, int n) {
-    if (sum == 0)   return 0;
+    if (sum == 0)   
+	return 0;
     int count = INT_MAX;
     for (int i = 0; i < n; i++)
     {
@@ -111,3 +102,26 @@ int mCdp(vector<int> &coins, int sum, int n) {
     }
     return dp[sum];
 }
+// Aditya Verma Dp- solution
+int minCoins(int coins[], int n, int sum) 
+    { 
+        int dp[n+1][sum+1];
+      
+        for(int i=0;i<=n;i++)
+            dp[i][0] = 0;
+            
+        for(int i=0;i<=sum;i++)
+            dp[0][i] = INT_MAX-1;
+    
+        for(int i=1;i<=n;i++)
+            for(int j=1;j<=sum;j++)
+            {
+                if(coins[i-1]<=j)        //note the indices values here
+                    dp[i][j] = min(1+dp[i][j-coins[i-1]], dp[i-1][j]);
+                else
+                    dp[i][j] = dp[i-1][j];
+            }
+        if(dp[n][sum]==INT_MAX-1)   //add this condition
+            return -1;
+        return dp[n][sum];
+    } 
