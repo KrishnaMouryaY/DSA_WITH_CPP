@@ -1,3 +1,6 @@
+### [PROBLEM LINK HERE](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118820/offering/1381885)
+
+```
 // Problem Statement
 // You are given an array 'ARR' of 'N' integers and two integers 'K' and 'M'.
 // You need to return true if the given array can be divided into pairs such that the sum of every pair gives remainder 'M' when divided by 'K'. Otherwise, you need to return false.
@@ -48,6 +51,7 @@
 // As pairs would be {6, 6} and {3, 0}, but second 0 will not be able to make pair with any of the elements, thus it is not possible to make valid pairs.
 
 // MY SOLUTION
+
 #include <bits/stdc++.h>
 bool isValidPair(vector<int> &arr, int n, int k, int m)
 {
@@ -73,3 +77,4 @@ bool isValidPair(vector<int> &arr, int n, int k, int m)
         return true;
     return false;
 }
+```
