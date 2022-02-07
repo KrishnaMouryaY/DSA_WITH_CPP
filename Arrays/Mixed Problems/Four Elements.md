@@ -1,4 +1,5 @@
-### [PROBLEM LINK HERE] (https://practice.geeksforgeeks.org/problems/four-elements2452/1/#)
+### [PROBLEM LINK HERE](https://practice.geeksforgeeks.org/problems/four-elements2452/1/#)
+
 ```
 Given an array A of N integers. You have to find whether a combination of four elements in the array whose sum is equal to a given value X exists or not.
 
