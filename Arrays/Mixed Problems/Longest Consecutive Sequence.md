@@ -1,4 +1,4 @@
-###[Longest Consecutive Sequence](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118820/offering/1381889)
+### [Longest Consecutive Sequence](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118820/offering/1381889)
 
 ```
 Problem Statement
