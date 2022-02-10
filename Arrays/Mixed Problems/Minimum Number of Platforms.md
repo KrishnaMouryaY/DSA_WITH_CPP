@@ -1,4 +1,4 @@
-### [PROBLEM LINK HERE](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118820/offering/1381892?leftPanelTab=0)
+### [Minimum Number of Platforms](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118820/offering/1381892?leftPanelTab=0)
 ```
 Problem Statement
 You have been given two arrays, 'AT' and 'DT', representing the arrival and departure times of all trains that reach a railway station.
