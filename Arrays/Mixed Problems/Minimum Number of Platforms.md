@@ -130,4 +130,27 @@ int calculateMinPatforms(int at[], int dt[], int n) {
         }
         return p;
 }
+
+// Efficient Approach
+#include<bits/stdc++.h>
+int calculateMinPatforms(int at[], int dt[], int n) {
+    // Write your code here.
+    sort(at, at + n);
+    sort(dt, dt + n);
+    int i = 1;
+    int j = 0;
+    int platforms = 1;
+    while (i < n && j < n) {
+        if (at[i] > dt[j]){
+            i++;
+        	j++;
+    	}
+    	else {
+            platforms++;
+            i++;
+        }
+    }
+	return platforms;
+       
+}
 ```
