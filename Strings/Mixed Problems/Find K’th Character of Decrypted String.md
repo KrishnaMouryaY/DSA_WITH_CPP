@@ -1,7 +1,8 @@
 ### [Find K’th Character of Decrypted String](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118626/offering/1382160)
 ```
 Problem Statement
-You have been given an Encrypted String where repetitions of substrings are represented as substring followed by the count of substrings.
+You have been given an Encrypted String 
+where repetitions of substrings are represented as substring followed by the count of substrings.
 Example: String "aabbbcdcdcd" will be encrypted as "a2b3cd3".
 You need to find the 'K'th character of Decrypted String. Decrypted String would have 1-based indexing.
 
