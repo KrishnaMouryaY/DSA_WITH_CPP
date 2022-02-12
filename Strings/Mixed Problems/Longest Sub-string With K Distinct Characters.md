@@ -33,16 +33,15 @@ int getLengthofLongestSubstring(string s, int k) {
        int size = 0;
        int d = k;
        for (int j = i; s[j] != '\0'; j++) {
-			int u = s[j];
+		int u = s[j];
            	if (count[s[j]] == 0) {
-                count[s[j]]++;
-                d--;
-            }
+                   count[s[j]]++;
+                   d--;
+            	}
            	if (d < 0)
-                break;
+                   break;
             size++;
             ans = max(ans, size);
-        
        }       
    }
    return ans;
