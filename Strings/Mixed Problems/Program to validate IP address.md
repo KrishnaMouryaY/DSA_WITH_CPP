@@ -27,7 +27,8 @@ Hence return ‘False’.
 Test Case 2:
 Given text ‘IPAddress = 122.0.330.0’,
 it is satisfying the first condition that given ‘IPAddress’ must be ‘a.b.c.d’ formed 
-but it not satisfying the second condition that c must in a range of ‘0’ to ‘255’ but the value of ‘c’ is ‘330’ and it is out of range.
+but it not satisfying the second condition that c must in a range of ‘0’ to ‘255’ 
+but the value of ‘c’ is ‘330’ and it is out of range.
 Hence return ‘False’.
 
 Test Case 3:
