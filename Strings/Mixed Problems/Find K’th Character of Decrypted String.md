@@ -33,7 +33,7 @@ char kThCharaterOfDecryptedString(string s, long long k)
     int start2 = 0;
     int end2 = 0;
     while (true) {
-	    while (end1 < n) {
+	while (end1 < n) {
             if (s[end1] >= '0' && s[end1] <= '9')
                 break;
             end1++;
