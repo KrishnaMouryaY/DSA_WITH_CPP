@@ -61,7 +61,7 @@ int getLengthofLongestSubstring(string s, int k) {
   int ans = 0;
   int visited[256] = {0};
   int j = 0;
-	for (int i = 0; i < n; i++) {
+  for (int i = 0; i < n; i++) {
         size++;
         visited[s[i]]++;
         if (visited[s[i]] == 1) {
