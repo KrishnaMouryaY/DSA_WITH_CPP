@@ -24,7 +24,7 @@ Test Case 2 :
 Some of the possible substrings are “abcd”,
 “bcdcda” having all the different characters of string ‘S’ at least once. “abcd” is the only substring with the shortest length. 
 
-```
+
 // Solution
 string shortestSubstring(string s)
 {
